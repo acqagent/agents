@@ -1,0 +1,12 @@
+{
+  "name": "acquisition-policy-agent",
+  "version": "1.0.12",
+  "description": "Check Regulations.gov readiness, disclose its limited DEMO_KEY fallback, then trace acquisition policy.",
+  "author": {"name": "AcqAgent", "url": "https://acqagent.ai"},
+  "homepage": "https://github.com/acqagent/agents",
+  "repository": "https://github.com/acqagent/agents",
+  "license": "MIT",
+  "keywords": ["federal-contracting", "acquisition-policy", "far", "rulemaking"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

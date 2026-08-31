@@ -1,0 +1,12 @@
+{
+  "name": "market-research-agent",
+  "version": "1.0.12",
+  "description": "Check SAM_API_KEY readiness, then build staged FAR Part 10 research; SAM work stops clearly when the key is absent.",
+  "author": {"name": "AcqAgent", "url": "https://acqagent.ai"},
+  "homepage": "https://github.com/acqagent/agents",
+  "repository": "https://github.com/acqagent/agents",
+  "license": "MIT",
+  "keywords": ["federal-contracting", "market-research", "far-part-10"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

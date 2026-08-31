@@ -1,0 +1,23 @@
+{
+  "name": "acquisition-policy-agent",
+  "version": "1.0.12",
+  "description": "Check Regulations.gov readiness, disclose its limited DEMO_KEY fallback, then trace acquisition policy.",
+  "author": {"name": "AcqAgent", "url": "https://acqagent.ai"},
+  "homepage": "https://github.com/acqagent/agents",
+  "repository": "https://github.com/acqagent/agents",
+  "license": "MIT",
+  "keywords": ["federal-contracting", "acquisition-policy", "far", "rulemaking"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Acquisition Policy Agent",
+    "shortDescription": "Trace FAR policy status and changes",
+    "longDescription": "First reports whether a Regulations.gov user key is configured and discloses the limited DEMO_KEY fallback, then uses codified regulations, rulemaking records, public dockets, and posted RFO deviations.",
+    "developerName": "AcqAgent",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://acqagent.ai",
+    "brandColor": "#5CB8E6",
+    "defaultPrompt": "Use $acquisition-policy-workflow. Check Regulations. On selection, four-line preview is first visible text; no preface/fence."
+  }
+}

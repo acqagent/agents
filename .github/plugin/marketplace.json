@@ -1,0 +1,26 @@
+{
+  "name": "acqagent",
+  "owner": {
+    "name": "AcqAgent",
+    "email": "acqagent.ai@gmail.com",
+    "url": "https://acqagent.ai"
+  },
+  "metadata": {
+    "description": "Federal acquisition agent packages maintained by AcqAgent",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "market-research-agent",
+      "description": "Conduct staged FAR Part 10 market research with SAM.gov readiness checks and explicit approval gates.",
+      "version": "1.0.12",
+      "source": "./plugins/market-research-agent"
+    },
+    {
+      "name": "acquisition-policy-agent",
+      "description": "Trace federal acquisition policy using eCFR, Federal Register, Regulations.gov, and Acquisition.gov.",
+      "version": "1.0.12",
+      "source": "./plugins/acquisition-policy-agent"
+    }
+  ]
+}

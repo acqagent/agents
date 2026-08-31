@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "acquisition-policy-agent",
+  "version": "1.0.12",
+  "description": "Check Regulations.gov readiness, disclose its limited DEMO_KEY fallback, then research acquisition policy with source-specific evidence.",
+  "author": {"name": "AcqAgent", "url": "https://acqagent.ai"},
+  "homepage": "https://github.com/acqagent/agents",
+  "repository": "https://github.com/acqagent/agents",
+  "license": "MIT",
+  "keywords": ["federal-contracting", "acquisition-policy", "far", "rulemaking", "class-deviation"],
+  "extensions": {
+    "com.openai.codex": {"manifest": ".codex-plugin/plugin.json"},
+    "com.anthropic.claude-code": {"manifest": ".claude-plugin/plugin.json"},
+    "com.github.copilot": {"agents": "com.github.copilot/agents"}
+  }
+}
