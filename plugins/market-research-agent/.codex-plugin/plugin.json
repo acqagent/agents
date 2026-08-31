@@ -1,0 +1,23 @@
+{
+  "name": "market-research-agent",
+  "version": "1.0.12",
+  "description": "Check SAM_API_KEY readiness, then build evidence-backed FAR Part 10 market research.",
+  "author": {"name": "AcqAgent", "url": "https://acqagent.ai"},
+  "homepage": "https://github.com/acqagent/agents",
+  "repository": "https://github.com/acqagent/agents",
+  "license": "MIT",
+  "keywords": ["federal-contracting", "market-research", "far-part-10"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Market Research Agent",
+    "shortDescription": "Build evidence-backed FAR Part 10 research",
+    "longDescription": "First reports whether SAM_API_KEY is configured, then presents the workflow menu and gathers traceable evidence without originating reserved acquisition decisions. SAM-dependent work stops clearly when the key is absent.",
+    "developerName": "AcqAgent",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://acqagent.ai",
+    "brandColor": "#5CB8E6",
+    "defaultPrompt": "Use $market-research-workflow. Check SAM. On selection, four-line preview is first visible text; no preface/fence."
+  }
+}

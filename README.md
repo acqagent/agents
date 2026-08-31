@@ -26,11 +26,12 @@ agent versions are tracked separately from the marketplace catalog version.
 - [`uv` and `uvx`](https://docs.astral.sh/uv/)
 - LibreOffice for full document rendering and workbook recalculation
 
-No account is required. Some federal data providers need a free API key — `SAM_API_KEY`
-for SAM.gov, `BLS_API_KEY` for wage data, `PERDIEM_API_KEY` for travel rates. USASpending
-and GSA CALC+ need no key. Configure credentials in the environment that launches the
-client, then restart it. Never paste a key into a conversation; no credentials are stored
-in this repository.
+Market Research requires `SAM_API_KEY` for SAM.gov-dependent work. Its USASpending
+route is keyless, and Tavily is an optional public-web provider. Acquisition Policy can
+use `REGULATIONS_GOV_API_KEY`; when it is absent, the package discloses the limited
+shared `DEMO_KEY` fallback. eCFR, Federal Register, and Acquisition.gov are keyless.
+Configure credentials in the environment that launches the client, then restart it.
+Never paste a key into a conversation; no credentials are stored in this repository.
 
 ## Install
 
@@ -39,11 +40,13 @@ Add this repository as a plugin marketplace, then install the agent you need.
 ```bash
 # Claude Code
 claude plugin marketplace add acqagent/agents
-claude plugin install <agent-name>@acqagent
+claude plugin install market-research-agent@acqagent
+claude plugin install acquisition-policy-agent@acqagent
 
 # Codex
-codex plugin marketplace add acqagent/agents --ref main
-codex plugin add <agent-name>@acqagent
+codex plugin marketplace add acqagent/agents
+codex plugin add market-research-agent@acqagent
+codex plugin add acquisition-policy-agent@acqagent
 ```
 
 Start a fresh session after installing. In Claude Code type `/` and begin typing the
@@ -53,6 +56,7 @@ agent name; in Codex type `@` and do the same.
 
 - [acqagent/skills](https://github.com/acqagent/skills) — portable acquisition skills
 - [acqagent/mcps](https://github.com/acqagent/mcps) — federal contracting MCP servers
+- [1102tools federal-contracting-mcps](https://github.com/1102tools-dev/federal-contracting-mcps) — the separately maintained SAM.gov MCP used by Market Research
 
 ## Attribution
 
